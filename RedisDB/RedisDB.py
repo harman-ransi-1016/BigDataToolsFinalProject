@@ -99,8 +99,6 @@ class RedisDB:
                     redis_data_str = redis_data.decode('utf-8')
                     data_dict = json.loads(redis_data_str)
                     data.append(data_dict)
-                print(f"\rRetrieving key {idx + 1}/{total_keys}", end='')
-            print("\nRetrieval complete.")
 
             # 2b) save data if we see anything
             if data:
